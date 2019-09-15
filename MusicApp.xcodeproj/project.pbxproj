@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		AB392F3F232DF62700EEFACE /* OldSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB392F3E232DF62700EEFACE /* OldSearchViewController.swift */; };
 		ABB986FC232E3ECA00719FF9 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB986FB232E3ECA00719FF9 /* TrackCell.xib */; };
 		ABB986FF232E3EFD00719FF9 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB986FE232E3EFD00719FF9 /* TrackCell.swift */; };
+		ABB98702232E837900719FF9 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB98701232E837900719FF9 /* FooterView.swift */; };
+		ABB98705232E89CD00719FF9 /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB98704232E89CD00719FF9 /* TrackDetailView.swift */; };
+		ABB98707232E89DE00719FF9 /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB98706232E89DE00719FF9 /* TrackDetailView.xib */; };
 		ABCA6842232E249D00EE62F2 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683B232E249D00EE62F2 /* SearchPresenter.swift */; };
 		ABCA6843232E249D00EE62F2 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683C232E249D00EE62F2 /* SearchWorker.swift */; };
 		ABCA6844232E249D00EE62F2 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683D232E249D00EE62F2 /* SearchRouter.swift */; };
@@ -42,6 +45,9 @@
 		AB392F3E232DF62700EEFACE /* OldSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSearchViewController.swift; sourceTree = "<group>"; };
 		ABB986FB232E3ECA00719FF9 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		ABB986FE232E3EFD00719FF9 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		ABB98701232E837900719FF9 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		ABB98704232E89CD00719FF9 /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
+		ABB98706232E89DE00719FF9 /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
 		ABCA683B232E249D00EE62F2 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		ABCA683C232E249D00EE62F2 /* SearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
 		ABCA683D232E249D00EE62F2 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
@@ -93,13 +99,30 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
-		ABB986FD232E3ECF00719FF9 /* Cells */ = {
+		ABB986FD232E3ECF00719FF9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				ABB986FB232E3ECA00719FF9 /* TrackCell.xib */,
 				ABB986FE232E3EFD00719FF9 /* TrackCell.swift */,
 			);
-			path = Cells;
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		ABB98700232E836700719FF9 /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				ABB98701232E837900719FF9 /* FooterView.swift */,
+			);
+			path = FooterView;
+			sourceTree = "<group>";
+		};
+		ABB98703232E89BA00719FF9 /* TrackDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				ABB98704232E89CD00719FF9 /* TrackDetailView.swift */,
+				ABB98706232E89DE00719FF9 /* TrackDetailView.xib */,
+			);
+			path = TrackDetailView;
 			sourceTree = "<group>";
 		};
 		ABCA6837232E242D00EE62F2 /* UI */ = {
@@ -124,7 +147,9 @@
 		ABCA6839232E244800EE62F2 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				ABB986FD232E3ECF00719FF9 /* Cells */,
+				ABB98703232E89BA00719FF9 /* TrackDetailView */,
+				ABB98700232E836700719FF9 /* FooterView */,
+				ABB986FD232E3ECF00719FF9 /* Cell */,
 				ABCA683F232E249D00EE62F2 /* SearchViewController.swift */,
 				ABCA6840232E249D00EE62F2 /* SearchInteractor.swift */,
 				ABCA683B232E249D00EE62F2 /* SearchPresenter.swift */,
@@ -259,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF154EE232DF1B600114078 /* LaunchScreen.storyboard in Resources */,
+				ABB98707232E89DE00719FF9 /* TrackDetailView.xib in Resources */,
 				ABB986FC232E3ECA00719FF9 /* TrackCell.xib in Resources */,
 				ABF154EB232DF1B600114078 /* Assets.xcassets in Resources */,
 				ABCA684A232E255B00EE62F2 /* Main.storyboard in Resources */,
@@ -317,6 +343,8 @@
 			files = (
 				ABCA6846232E249D00EE62F2 /* SearchViewController.swift in Sources */,
 				ABCA684E232E2AD900EE62F2 /* UIViewController+Storyboard.swift in Sources */,
+				ABB98702232E837900719FF9 /* FooterView.swift in Sources */,
+				ABB98705232E89CD00719FF9 /* TrackDetailView.swift in Sources */,
 				ABCA6842232E249D00EE62F2 /* SearchPresenter.swift in Sources */,
 				ABCA6847232E249D00EE62F2 /* SearchInteractor.swift in Sources */,
 				AB392F3F232DF62700EEFACE /* OldSearchViewController.swift in Sources */,

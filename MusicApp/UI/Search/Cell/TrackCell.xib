@@ -29,32 +29,45 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILD-dV-Zmf">
-                        <rect key="frame" x="90" y="12" width="303" height="21"/>
+                        <rect key="frame" x="90" y="12" width="278" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUz-fZ-eOi">
-                        <rect key="frame" x="90" y="36" width="303" height="16"/>
+                        <rect key="frame" x="90" y="36" width="278" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.72156862745098038" green="0.72156862745098038" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytn-bD-XCy">
-                        <rect key="frame" x="90" y="56" width="303" height="16"/>
+                        <rect key="frame" x="90" y="56" width="278" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDW-fY-HwY">
+                        <rect key="frame" x="377" y="34" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="Awz-DR-KKC"/>
+                            <constraint firstAttribute="height" constant="16" id="bKA-Dq-hJt"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="Add"/>
+                        <connections>
+                            <action selector="addTrackButtonAction:" destination="b8u-oz-fIr" eventType="touchUpInside" id="AQv-zT-QBy"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="ILD-dV-Zmf" secondAttribute="trailing" constant="21" id="6A6-yE-Vla"/>
                     <constraint firstItem="ILD-dV-Zmf" firstAttribute="leading" secondItem="ipB-ED-GD0" secondAttribute="trailing" constant="9" id="98p-Cu-czK"/>
                     <constraint firstItem="ytn-bD-XCy" firstAttribute="leading" secondItem="gUz-fZ-eOi" secondAttribute="leading" id="D16-Di-LrV"/>
                     <constraint firstItem="gUz-fZ-eOi" firstAttribute="trailing" secondItem="ILD-dV-Zmf" secondAttribute="trailing" id="K47-kr-sCE"/>
                     <constraint firstItem="ytn-bD-XCy" firstAttribute="top" secondItem="gUz-fZ-eOi" secondAttribute="bottom" constant="4" id="R76-gd-aGA"/>
+                    <constraint firstAttribute="trailing" secondItem="vDW-fY-HwY" secondAttribute="trailing" constant="21" id="T9B-MM-3Kh"/>
                     <constraint firstItem="gUz-fZ-eOi" firstAttribute="leading" secondItem="ILD-dV-Zmf" secondAttribute="leading" id="XZN-nA-3UK"/>
                     <constraint firstItem="ytn-bD-XCy" firstAttribute="trailing" secondItem="gUz-fZ-eOi" secondAttribute="trailing" id="ZvE-OL-oJG"/>
+                    <constraint firstItem="vDW-fY-HwY" firstAttribute="centerY" secondItem="oqN-IW-dpg" secondAttribute="centerY" id="a8e-fm-nBX"/>
+                    <constraint firstItem="vDW-fY-HwY" firstAttribute="leading" secondItem="ILD-dV-Zmf" secondAttribute="trailing" constant="9" id="b57-OX-Ox2"/>
                     <constraint firstItem="gUz-fZ-eOi" firstAttribute="top" secondItem="ILD-dV-Zmf" secondAttribute="bottom" constant="3" id="ccB-jk-1JZ"/>
                     <constraint firstAttribute="bottom" secondItem="ipB-ED-GD0" secondAttribute="bottom" constant="12" id="ev9-DV-LmP"/>
                     <constraint firstItem="ipB-ED-GD0" firstAttribute="top" secondItem="oqN-IW-dpg" secondAttribute="top" constant="12" id="ga7-q1-Xvv"/>
@@ -73,4 +86,7 @@
             <point key="canvasLocation" x="-200" y="66"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Add" width="16" height="16"/>
+    </resources>
 </document>

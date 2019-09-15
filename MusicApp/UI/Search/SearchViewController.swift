@@ -17,6 +17,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     var router: (NSObjectProtocol & SearchRoutingLogic)?
     
     private let searchController = UISearchController(searchResultsController: nil)
+    private lazy var footerView = FooterView()
     private var timer: Timer?
     
     private var tracks: SearchViewModel = SearchViewModel(cells: []) {
@@ -57,20 +58,30 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         super.viewDidLoad()
         
         setupSearchBar()
-        let nib = UINib(nibName: "TrackCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: TrackCell.cellId)
+        setupTableView()
     }
     
     private func setupSearchBar() {
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
+    }
+    
+    private func setupTableView() {
+        let nib = UINib(nibName: "TrackCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: TrackCell.cellId)
+        tableView.tableFooterView = footerView
     }
     
     func displayData(viewModel: Search.Model.ViewModel.ViewModelData) {
         switch viewModel {
         case let .displayTracks(tracks):
             self.tracks = tracks
+            footerView.hideLoader()
+            
+        case.displayFooterView:
+            footerView.showLoader()
             
         case .displayError(_):
             break
@@ -97,8 +108,31 @@ extension SearchViewController: UITableViewDataSource {
 
 //MARK: - UITableView Delegate
 extension SearchViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let trackDetailView = Bundle.main.loadNibNamed("TrackDetailView", owner: self, options: nil)?.first as? TrackDetailView else {
+            return
+        }
+        let track = tracks.cells[indexPath.row]
+        let window = UIApplication.shared.keyWindow
+        trackDetailView.set(viewModel: track)
+        window?.addSubview(trackDetailView)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 84
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "Please enter search term above..."
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        label.textColor = #colorLiteral(red: 0.770968914, green: 0.7711986899, blue: 0.7777143121, alpha: 1)
+        return label
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return tracks.cells.isEmpty ? (view.frame.height / 3) : 0
     }
 }
 

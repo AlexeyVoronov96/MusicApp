@@ -33,4 +33,7 @@ class TrackCell: UITableViewCell {
             trackImageView.kf.setImage(with: trackModel?.iconURL)
         }
     }
+    
+    @IBAction private func addTrackButtonAction(_ sender: UIButton) {
+    }
 }

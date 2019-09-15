@@ -19,12 +19,14 @@ enum Search {
     struct Response {
       enum ResponseType {
         case presentTracks(_ response: TracksResponse)
+        case presentFooterView
         case presentError(_ error: Error)
       }
     }
     struct ViewModel {
       enum ViewModelData {
         case displayTracks(_ searchViewModel: SearchViewModel)
+        case displayFooterView
         case displayError(_ error: Error)
       }
     }
@@ -37,6 +39,7 @@ struct SearchViewModel {
         let trackName: String
         let collectionName: String?
         let artistName: String
+        let previewUrl: URL?
     }
     
     let cells: [Cell]

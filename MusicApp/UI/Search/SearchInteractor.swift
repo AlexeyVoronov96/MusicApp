@@ -25,6 +25,7 @@ class SearchInteractor: SearchBusinessLogic {
         
         switch request {
         case let .getTracks(name):
+            presenter?.presentData(response: .presentFooterView)
             apiService.getData(with: .searchTrack(name: name), type: TracksResponse.self) { [weak self] (result) in
                 switch result {
                 case let .success(response):

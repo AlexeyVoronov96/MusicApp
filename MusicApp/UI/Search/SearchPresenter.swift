@@ -24,6 +24,9 @@ class SearchPresenter: SearchPresentationLogic {
             let searchViewModel = SearchViewModel(cells: cells)
             viewController?.displayData(viewModel: .displayTracks(searchViewModel))
             
+        case .presentFooterView:
+            viewController?.displayData(viewModel: .displayFooterView)
+            
         case let .presentError(error):
             viewController?.displayData(viewModel: .displayError(error))
         }
@@ -34,6 +37,7 @@ class SearchPresenter: SearchPresentationLogic {
         return SearchViewModel.Cell(iconURL: track.artworkUrl100,
                                     trackName: track.trackName,
                                     collectionName: track.collectionName,
-                                    artistName: track.artistName)
+                                    artistName: track.artistName,
+                                    previewUrl: track.previewUrl)
     }
 }
