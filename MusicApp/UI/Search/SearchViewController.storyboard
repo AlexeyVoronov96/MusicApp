@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="txW-56-R8H">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="nT7-B5-tdx">
+            <objects>
+                <viewController id="txW-56-R8H" customClass="SearchViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ia-G9-xF8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RhR-IE-QTc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="txW-56-R8H" id="IhF-1u-Ks2"/>
+                                    <outlet property="delegate" destination="txW-56-R8H" id="04c-Hn-7S7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RhR-IE-QTc" firstAttribute="top" secondItem="IXv-vW-SN2" secondAttribute="top" id="MpO-fe-23I"/>
+                            <constraint firstAttribute="bottom" secondItem="RhR-IE-QTc" secondAttribute="bottom" id="aho-Ci-ev6"/>
+                            <constraint firstItem="RhR-IE-QTc" firstAttribute="leading" secondItem="IXv-vW-SN2" secondAttribute="leading" id="e97-yT-lRh"/>
+                            <constraint firstItem="IXv-vW-SN2" firstAttribute="trailing" secondItem="RhR-IE-QTc" secondAttribute="trailing" id="gTy-Ik-dBT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IXv-vW-SN2"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RhR-IE-QTc" id="k89-Hy-xnl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQ1-UH-KaP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="291" y="-226"/>
+        </scene>
+    </scenes>
+</document>

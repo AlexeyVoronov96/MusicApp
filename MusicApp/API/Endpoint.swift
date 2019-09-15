@@ -30,7 +30,8 @@ enum EndPoint {
         switch self {
         case let .searchTrack(name):
             return [
-                "term": name
+                "term": name,
+                "media": "music"
             ]
         }
     }

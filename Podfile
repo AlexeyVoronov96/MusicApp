@@ -6,5 +6,5 @@ target 'MusicApp' do
   use_frameworks!
 
   # Pods for MusicApp
-
+  pod 'Kingfisher', '~> 5.0'
 end

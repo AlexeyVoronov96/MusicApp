@@ -12,11 +12,21 @@
 		AB0A55E0232E100800151FF6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A55DF232E100800151FF6 /* Endpoint.swift */; };
 		AB0A55E2232E132700151FF6 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A55E1232E132700151FF6 /* Container.swift */; };
 		AB0A55E5232E149400151FF6 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A55E4232E149400151FF6 /* Tracks.swift */; };
-		AB392F3F232DF62700EEFACE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB392F3E232DF62700EEFACE /* SearchViewController.swift */; };
+		AB392F3F232DF62700EEFACE /* OldSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB392F3E232DF62700EEFACE /* OldSearchViewController.swift */; };
+		ABB986FC232E3ECA00719FF9 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB986FB232E3ECA00719FF9 /* TrackCell.xib */; };
+		ABB986FF232E3EFD00719FF9 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB986FE232E3EFD00719FF9 /* TrackCell.swift */; };
+		ABCA6842232E249D00EE62F2 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683B232E249D00EE62F2 /* SearchPresenter.swift */; };
+		ABCA6843232E249D00EE62F2 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683C232E249D00EE62F2 /* SearchWorker.swift */; };
+		ABCA6844232E249D00EE62F2 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683D232E249D00EE62F2 /* SearchRouter.swift */; };
+		ABCA6845232E249D00EE62F2 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683E232E249D00EE62F2 /* SearchModels.swift */; };
+		ABCA6846232E249D00EE62F2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683F232E249D00EE62F2 /* SearchViewController.swift */; };
+		ABCA6847232E249D00EE62F2 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA6840232E249D00EE62F2 /* SearchInteractor.swift */; };
+		ABCA684A232E255B00EE62F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABCA6849232E255B00EE62F2 /* Main.storyboard */; };
+		ABCA684C232E290B00EE62F2 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABCA684B232E290B00EE62F2 /* SearchViewController.storyboard */; };
+		ABCA684E232E2AD900EE62F2 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA684D232E2AD900EE62F2 /* UIViewController+Storyboard.swift */; };
 		ABF154DF232DF1AE00114078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF154DE232DF1AE00114078 /* AppDelegate.swift */; };
 		ABF154E1232DF1AE00114078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF154E0232DF1AE00114078 /* SceneDelegate.swift */; };
 		ABF154E3232DF1AE00114078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF154E2232DF1AE00114078 /* ViewController.swift */; };
-		ABF154E6232DF1AE00114078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF154E4232DF1AE00114078 /* Main.storyboard */; };
 		ABF154E9232DF1AE00114078 /* MusicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABF154E7232DF1AE00114078 /* MusicApp.xcdatamodeld */; };
 		ABF154EB232DF1B600114078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF154EA232DF1B600114078 /* Assets.xcassets */; };
 		ABF154EE232DF1B600114078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF154EC232DF1B600114078 /* LaunchScreen.storyboard */; };
@@ -29,12 +39,22 @@
 		AB0A55DF232E100800151FF6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AB0A55E1232E132700151FF6 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		AB0A55E4232E149400151FF6 /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
-		AB392F3E232DF62700EEFACE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		AB392F3E232DF62700EEFACE /* OldSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSearchViewController.swift; sourceTree = "<group>"; };
+		ABB986FB232E3ECA00719FF9 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		ABB986FE232E3EFD00719FF9 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		ABCA683B232E249D00EE62F2 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		ABCA683C232E249D00EE62F2 /* SearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
+		ABCA683D232E249D00EE62F2 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		ABCA683E232E249D00EE62F2 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
+		ABCA683F232E249D00EE62F2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		ABCA6840232E249D00EE62F2 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		ABCA6849232E255B00EE62F2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ABCA684B232E290B00EE62F2 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
+		ABCA684D232E2AD900EE62F2 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		ABF154DB232DF1AE00114078 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF154DE232DF1AE00114078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABF154E0232DF1AE00114078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ABF154E2232DF1AE00114078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ABF154E5232DF1AE00114078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABF154E8232DF1AE00114078 /* MusicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicApp.xcdatamodel; sourceTree = "<group>"; };
 		ABF154EA232DF1B600114078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABF154ED232DF1B600114078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +93,58 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
+		ABB986FD232E3ECF00719FF9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ABB986FB232E3ECA00719FF9 /* TrackCell.xib */,
+				ABB986FE232E3EFD00719FF9 /* TrackCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ABCA6837232E242D00EE62F2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				ABF154F5232DF2D300114078 /* TabBarController.swift */,
+				ABCA6838232E244000EE62F2 /* Library */,
+				ABCA6839232E244800EE62F2 /* Search */,
+				AB392F3E232DF62700EEFACE /* OldSearchViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		ABCA6838232E244000EE62F2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				ABF154E2232DF1AE00114078 /* ViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		ABCA6839232E244800EE62F2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				ABB986FD232E3ECF00719FF9 /* Cells */,
+				ABCA683F232E249D00EE62F2 /* SearchViewController.swift */,
+				ABCA6840232E249D00EE62F2 /* SearchInteractor.swift */,
+				ABCA683B232E249D00EE62F2 /* SearchPresenter.swift */,
+				ABCA683E232E249D00EE62F2 /* SearchModels.swift */,
+				ABCA683C232E249D00EE62F2 /* SearchWorker.swift */,
+				ABCA683D232E249D00EE62F2 /* SearchRouter.swift */,
+				ABCA684B232E290B00EE62F2 /* SearchViewController.storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		ABCA683A232E245400EE62F2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				AB0A55E1232E132700151FF6 /* Container.swift */,
+				ABCA684D232E2AD900EE62F2 /* UIViewController+Storyboard.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		ABF154D2232DF1AE00114078 = {
 			isa = PBXGroup;
 			children = (
@@ -96,17 +168,15 @@
 			children = (
 				AB0A55DC232E0DD300151FF6 /* API */,
 				AB0A55E3232E147F00151FF6 /* DataModels */,
+				ABCA683A232E245400EE62F2 /* Tools */,
+				ABCA6837232E242D00EE62F2 /* UI */,
 				ABF154DE232DF1AE00114078 /* AppDelegate.swift */,
 				ABF154E0232DF1AE00114078 /* SceneDelegate.swift */,
-				ABF154E2232DF1AE00114078 /* ViewController.swift */,
-				ABF154E4232DF1AE00114078 /* Main.storyboard */,
 				ABF154EA232DF1B600114078 /* Assets.xcassets */,
 				ABF154EC232DF1B600114078 /* LaunchScreen.storyboard */,
 				ABF154EF232DF1B600114078 /* Info.plist */,
 				ABF154E7232DF1AE00114078 /* MusicApp.xcdatamodeld */,
-				ABF154F5232DF2D300114078 /* TabBarController.swift */,
-				AB392F3E232DF62700EEFACE /* SearchViewController.swift */,
-				AB0A55E1232E132700151FF6 /* Container.swift */,
+				ABCA6849232E255B00EE62F2 /* Main.storyboard */,
 			);
 			path = MusicApp;
 			sourceTree = "<group>";
@@ -139,6 +209,7 @@
 				ABF154D7232DF1AE00114078 /* Sources */,
 				ABF154D8232DF1AE00114078 /* Frameworks */,
 				ABF154D9232DF1AE00114078 /* Resources */,
+				D28930672D1EA201621F104D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,8 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF154EE232DF1B600114078 /* LaunchScreen.storyboard in Resources */,
+				ABB986FC232E3ECA00719FF9 /* TrackCell.xib in Resources */,
 				ABF154EB232DF1B600114078 /* Assets.xcassets in Resources */,
-				ABF154E6232DF1AE00114078 /* Main.storyboard in Resources */,
+				ABCA684A232E255B00EE62F2 /* Main.storyboard in Resources */,
+				ABCA684C232E290B00EE62F2 /* SearchViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +291,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D28930672D1EA201621F104D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusicApp/Pods-MusicApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusicApp/Pods-MusicApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MusicApp/Pods-MusicApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -225,30 +315,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB392F3F232DF62700EEFACE /* SearchViewController.swift in Sources */,
+				ABCA6846232E249D00EE62F2 /* SearchViewController.swift in Sources */,
+				ABCA684E232E2AD900EE62F2 /* UIViewController+Storyboard.swift in Sources */,
+				ABCA6842232E249D00EE62F2 /* SearchPresenter.swift in Sources */,
+				ABCA6847232E249D00EE62F2 /* SearchInteractor.swift in Sources */,
+				AB392F3F232DF62700EEFACE /* OldSearchViewController.swift in Sources */,
 				AB0A55DE232E0DF200151FF6 /* APIService.swift in Sources */,
 				AB0A55E0232E100800151FF6 /* Endpoint.swift in Sources */,
 				ABF154E3232DF1AE00114078 /* ViewController.swift in Sources */,
+				ABCA6843232E249D00EE62F2 /* SearchWorker.swift in Sources */,
 				ABF154DF232DF1AE00114078 /* AppDelegate.swift in Sources */,
+				ABCA6845232E249D00EE62F2 /* SearchModels.swift in Sources */,
+				ABB986FF232E3EFD00719FF9 /* TrackCell.swift in Sources */,
 				ABF154E1232DF1AE00114078 /* SceneDelegate.swift in Sources */,
 				AB0A55E5232E149400151FF6 /* Tracks.swift in Sources */,
 				ABF154F6232DF2D300114078 /* TabBarController.swift in Sources */,
 				AB0A55E2232E132700151FF6 /* Container.swift in Sources */,
 				ABF154E9232DF1AE00114078 /* MusicApp.xcdatamodeld in Sources */,
+				ABCA6844232E249D00EE62F2 /* SearchRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ABF154E4232DF1AE00114078 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ABF154E5232DF1AE00114078 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ABF154EC232DF1B600114078 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

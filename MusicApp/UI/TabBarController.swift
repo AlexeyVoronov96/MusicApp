@@ -14,20 +14,11 @@ class TabBarController: UITabBarController {
         
         tabBar.tintColor = #colorLiteral(red: 1, green: 0, blue: 0.3764705882, alpha: 1)
         
-        let searchVC = SearchViewController()
-        let navigationVC = UINavigationController(rootViewController: searchVC)
-        navigationVC.tabBarItem.image = #imageLiteral(resourceName: "Search")
-        navigationVC.tabBarItem.title = "Search"
-        searchVC.navigationItem.title = "Search"
-        navigationVC.navigationBar.prefersLargeTitles = true
-        
-        let libraryVC = ViewController()
-        libraryVC.tabBarItem.image = #imageLiteral(resourceName: "Library")
-        libraryVC.tabBarItem.title = "Library"
+        let searchVC: SearchViewController = SearchViewController.loadFromStoryboard()
         
         viewControllers = [
             generateViewController(ViewController(), with: #imageLiteral(resourceName: "Library"), and: "Library"),
-            generateViewController(SearchViewController(), with: #imageLiteral(resourceName: "Search"), and: "Search")
+            generateViewController(searchVC, with: #imageLiteral(resourceName: "Search"), and: "Search")
         ]
     }
     
