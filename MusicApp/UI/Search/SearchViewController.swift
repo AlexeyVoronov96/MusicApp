@@ -20,6 +20,8 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     private lazy var footerView = FooterView()
     private var timer: Timer?
     
+    weak var transitionDelegate: TrackDetailViewTransitionDelegate?
+    
     private var tracks: SearchViewModel = SearchViewModel(cells: []) {
         didSet {
             DispatchQueue.main.async { [weak self] in
@@ -109,13 +111,8 @@ extension SearchViewController: UITableViewDataSource {
 //MARK: - UITableView Delegate
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let trackDetailView = Bundle.main.loadNibNamed("TrackDetailView", owner: self, options: nil)?.first as? TrackDetailView else {
-            return
-        }
         let track = tracks.cells[indexPath.row]
-        let window = UIApplication.shared.keyWindow
-        trackDetailView.set(viewModel: track)
-        window?.addSubview(trackDetailView)
+        transitionDelegate?.maximizeTrackDetailView(with: track)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -142,5 +139,36 @@ extension SearchViewController: UISearchBarDelegate {
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] (_) in
             self?.interactor?.makeRequest(request: .getTracks(name: searchText))
         })
+    }
+}
+
+extension SearchViewController: TrackDetailViewDelegate {
+    private func getTrack(isForwardTrack: Bool) -> SearchViewModel.Cell? {
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return nil
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+        var nextIndexPath: IndexPath
+        if isForwardTrack {
+            nextIndexPath = IndexPath(row: indexPath.row + 1, section: indexPath.section)
+            if nextIndexPath.row == tracks.cells.count {
+                nextIndexPath.row = 0
+            }
+        } else {
+            nextIndexPath = IndexPath(row: indexPath.row - 1, section: indexPath.section)
+            if nextIndexPath.row < 0 {
+                nextIndexPath.row = tracks.cells.count - 1
+            }
+        }
+        tableView.selectRow(at: nextIndexPath, animated: true, scrollPosition: .none)
+        return tracks.cells[nextIndexPath.row]
+    }
+    
+    func moveBackForPreviousTrack() -> SearchViewModel.Cell? {
+        return getTrack(isForwardTrack: false)
+    }
+    
+    func moveForwardForNextTrack() -> SearchViewModel.Cell? {
+        return getTrack(isForwardTrack: true)
     }
 }
