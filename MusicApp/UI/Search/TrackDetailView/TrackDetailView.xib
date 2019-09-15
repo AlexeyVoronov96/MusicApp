@@ -24,7 +24,7 @@
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QuH-Kn-Jpq">
-                            <rect key="frame" x="8" y="8" width="398" height="48"/>
+                            <rect key="frame" x="16" y="8" width="382" height="48"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6FT-8E-dBl">
                                     <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
@@ -32,15 +32,21 @@
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="6FT-8E-dBl" secondAttribute="height" id="Yqs-CQ-Fyz"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ4-5S-zI2">
-                                    <rect key="frame" x="64" y="0.0" width="210" height="48"/>
+                                    <rect key="frame" x="64" y="0.0" width="194" height="48"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbw-dF-DOc">
-                                    <rect key="frame" x="290" y="0.0" width="44" height="48"/>
+                                    <rect key="frame" x="274" y="0.0" width="44" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="dXP-e0-VnG"/>
                                     </constraints>
@@ -52,7 +58,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92D-Al-rwu">
-                                    <rect key="frame" x="350" y="0.0" width="48" height="48"/>
+                                    <rect key="frame" x="334" y="0.0" width="48" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="48" id="MdI-4F-BHA"/>
                                     </constraints>
@@ -70,8 +76,8 @@
                         <constraint firstItem="73X-OP-Mba" firstAttribute="top" secondItem="j70-Cr-XtD" secondAttribute="top" id="5CG-GH-cRd"/>
                         <constraint firstAttribute="trailing" secondItem="73X-OP-Mba" secondAttribute="trailing" id="DIt-sx-jVR"/>
                         <constraint firstItem="73X-OP-Mba" firstAttribute="leading" secondItem="j70-Cr-XtD" secondAttribute="leading" id="ONs-4L-SNK"/>
-                        <constraint firstAttribute="trailing" secondItem="QuH-Kn-Jpq" secondAttribute="trailing" constant="8" id="SGI-Px-Fzf"/>
-                        <constraint firstItem="QuH-Kn-Jpq" firstAttribute="leading" secondItem="j70-Cr-XtD" secondAttribute="leading" constant="8" id="WJs-Bz-a74"/>
+                        <constraint firstAttribute="trailing" secondItem="QuH-Kn-Jpq" secondAttribute="trailing" constant="16" id="SGI-Px-Fzf"/>
+                        <constraint firstItem="QuH-Kn-Jpq" firstAttribute="leading" secondItem="j70-Cr-XtD" secondAttribute="leading" constant="16" id="WJs-Bz-a74"/>
                         <constraint firstItem="QuH-Kn-Jpq" firstAttribute="top" secondItem="j70-Cr-XtD" secondAttribute="top" constant="8" id="drO-o5-43P"/>
                         <constraint firstAttribute="height" constant="64" id="fgK-a9-qhv"/>
                         <constraint firstAttribute="bottom" secondItem="QuH-Kn-Jpq" secondAttribute="bottom" constant="8" id="qf5-Xm-xVg"/>
@@ -86,12 +92,6 @@
                                 <constraint firstAttribute="height" constant="44" id="naE-JV-1xW"/>
                             </constraints>
                             <state key="normal" image="Drag Down"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="dragDownButtonAction:" destination="FN8-Dh-jE6" eventType="touchUpInside" id="8e1-j4-3Cn"/>
                             </connections>
