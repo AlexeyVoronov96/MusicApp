@@ -1,0 +1,7 @@
+.DS_Store
+MusicApp.xcodeproj/project.xcworkspace/xcuserdata
+Pods
+MusicApp.xcworkspace
+Podfile.lock
+MusicApp.xcodeproj/xcuserdata
+output

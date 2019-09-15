@@ -14,6 +14,7 @@
 		ABF154E9232DF1AE00114078 /* MusicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABF154E7232DF1AE00114078 /* MusicApp.xcdatamodeld */; };
 		ABF154EB232DF1B600114078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF154EA232DF1B600114078 /* Assets.xcassets */; };
 		ABF154EE232DF1B600114078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF154EC232DF1B600114078 /* LaunchScreen.storyboard */; };
+		ABF154F6232DF2D300114078 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF154F5232DF2D300114078 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		ABF154EA232DF1B600114078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABF154ED232DF1B600114078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABF154EF232DF1B600114078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF154F5232DF2D300114078 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				ABF154EC232DF1B600114078 /* LaunchScreen.storyboard */,
 				ABF154EF232DF1B600114078 /* Info.plist */,
 				ABF154E7232DF1AE00114078 /* MusicApp.xcdatamodeld */,
+				ABF154F5232DF2D300114078 /* TabBarController.swift */,
 			);
 			path = MusicApp;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				ABF154E3232DF1AE00114078 /* ViewController.swift in Sources */,
 				ABF154DF232DF1AE00114078 /* AppDelegate.swift in Sources */,
 				ABF154E1232DF1AE00114078 /* SceneDelegate.swift in Sources */,
+				ABF154F6232DF2D300114078 /* TabBarController.swift in Sources */,
 				ABF154E9232DF1AE00114078 /* MusicApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
