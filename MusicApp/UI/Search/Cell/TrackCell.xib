@@ -46,13 +46,16 @@
                         <color key="textColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDW-fY-HwY">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDW-fY-HwY">
                         <rect key="frame" x="382" y="34" width="16" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="16" id="Awz-DR-KKC"/>
                             <constraint firstAttribute="height" constant="16" id="bKA-Dq-hJt"/>
                         </constraints>
-                        <state key="normal" title="Button" image="Add"/>
+                        <color key="tintColor" red="0.92549019610000005" green="0.18823529410000001" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="Button" image="Add">
+                            <color key="titleColor" red="0.92549019610000005" green="0.18823529410000001" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
                         <connections>
                             <action selector="addTrackButtonAction:" destination="b8u-oz-fIr" eventType="touchUpInside" id="AQv-zT-QBy"/>
                         </connections>
@@ -78,12 +81,13 @@
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
+                <outlet property="addTrackButton" destination="vDW-fY-HwY" id="hUo-fb-PgY"/>
                 <outlet property="artistNameLabel" destination="gUz-fZ-eOi" id="vGV-C0-qI7"/>
                 <outlet property="collectionNameLabel" destination="ytn-bD-XCy" id="nxZ-T6-mgV"/>
                 <outlet property="trackImageView" destination="ipB-ED-GD0" id="OdC-4J-FtA"/>
                 <outlet property="trackNameLabel" destination="ILD-dV-Zmf" id="gtN-fM-nkK"/>
             </connections>
-            <point key="canvasLocation" x="-200" y="66"/>
+            <point key="canvasLocation" x="-200.00000000000003" y="65.625"/>
         </tableViewCell>
     </objects>
     <resources>

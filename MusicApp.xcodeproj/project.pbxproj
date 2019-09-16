@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		AB0A55E0232E100800151FF6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A55DF232E100800151FF6 /* Endpoint.swift */; };
 		AB0A55E2232E132700151FF6 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A55E1232E132700151FF6 /* Container.swift */; };
 		AB0A55E5232E149400151FF6 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A55E4232E149400151FF6 /* Tracks.swift */; };
-		AB392F3F232DF62700EEFACE /* OldSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB392F3E232DF62700EEFACE /* OldSearchViewController.swift */; };
 		ABB986FC232E3ECA00719FF9 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB986FB232E3ECA00719FF9 /* TrackCell.xib */; };
 		ABB986FF232E3EFD00719FF9 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB986FE232E3EFD00719FF9 /* TrackCell.swift */; };
 		ABB98702232E837900719FF9 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB98701232E837900719FF9 /* FooterView.swift */; };
@@ -20,6 +19,12 @@
 		ABB98707232E89DE00719FF9 /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB98706232E89DE00719FF9 /* TrackDetailView.xib */; };
 		ABB98709232EA14600719FF9 /* CMTime + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB98708232EA14600719FF9 /* CMTime + Extension.swift */; };
 		ABB9870B232EB01C00719FF9 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9870A232EB01C00719FF9 /* UIView + Extension.swift */; };
+		ABB9870D232FDAEB00719FF9 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9870C232FDAEB00719FF9 /* LibraryView.swift */; };
+		ABB98710232FE13000719FF9 /* LibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9870F232FE13000719FF9 /* LibraryCell.swift */; };
+		ABB98718232FE8DC00719FF9 /* TrackLocal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB98716232FE8DC00719FF9 /* TrackLocal+CoreDataClass.swift */; };
+		ABB98719232FE8DC00719FF9 /* TrackLocal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB98717232FE8DC00719FF9 /* TrackLocal+CoreDataProperties.swift */; };
+		ABB9871B232FE95400719FF9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9871A232FE95400719FF9 /* CoreDataManager.swift */; };
+		ABB9871F232FF1CD00719FF9 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = ABB9871E232FF1CD00719FF9 /* URLImage */; };
 		ABCA6842232E249D00EE62F2 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683B232E249D00EE62F2 /* SearchPresenter.swift */; };
 		ABCA6843232E249D00EE62F2 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683C232E249D00EE62F2 /* SearchWorker.swift */; };
 		ABCA6844232E249D00EE62F2 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683D232E249D00EE62F2 /* SearchRouter.swift */; };
@@ -31,7 +36,6 @@
 		ABCA684E232E2AD900EE62F2 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA684D232E2AD900EE62F2 /* UIViewController+Storyboard.swift */; };
 		ABF154DF232DF1AE00114078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF154DE232DF1AE00114078 /* AppDelegate.swift */; };
 		ABF154E1232DF1AE00114078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF154E0232DF1AE00114078 /* SceneDelegate.swift */; };
-		ABF154E3232DF1AE00114078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF154E2232DF1AE00114078 /* ViewController.swift */; };
 		ABF154E9232DF1AE00114078 /* MusicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABF154E7232DF1AE00114078 /* MusicApp.xcdatamodeld */; };
 		ABF154EB232DF1B600114078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF154EA232DF1B600114078 /* Assets.xcassets */; };
 		ABF154EE232DF1B600114078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF154EC232DF1B600114078 /* LaunchScreen.storyboard */; };
@@ -44,7 +48,6 @@
 		AB0A55DF232E100800151FF6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AB0A55E1232E132700151FF6 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		AB0A55E4232E149400151FF6 /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
-		AB392F3E232DF62700EEFACE /* OldSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSearchViewController.swift; sourceTree = "<group>"; };
 		ABB986FB232E3ECA00719FF9 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		ABB986FE232E3EFD00719FF9 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		ABB98701232E837900719FF9 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
@@ -52,6 +55,11 @@
 		ABB98706232E89DE00719FF9 /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
 		ABB98708232EA14600719FF9 /* CMTime + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMTime + Extension.swift"; sourceTree = "<group>"; };
 		ABB9870A232EB01C00719FF9 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		ABB9870C232FDAEB00719FF9 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		ABB9870F232FE13000719FF9 /* LibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
+		ABB98716232FE8DC00719FF9 /* TrackLocal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TrackLocal+CoreDataClass.swift"; path = "MusicApp/LocalData/TrackLocal/TrackLocal+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		ABB98717232FE8DC00719FF9 /* TrackLocal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TrackLocal+CoreDataProperties.swift"; path = "MusicApp/LocalData/TrackLocal/TrackLocal+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ABB9871A232FE95400719FF9 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		ABCA683B232E249D00EE62F2 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		ABCA683C232E249D00EE62F2 /* SearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
 		ABCA683D232E249D00EE62F2 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
@@ -64,7 +72,6 @@
 		ABF154DB232DF1AE00114078 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF154DE232DF1AE00114078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABF154E0232DF1AE00114078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ABF154E2232DF1AE00114078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABF154E8232DF1AE00114078 /* MusicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicApp.xcdatamodel; sourceTree = "<group>"; };
 		ABF154EA232DF1B600114078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABF154ED232DF1B600114078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB9871F232FF1CD00719FF9 /* URLImage in Frameworks */,
 				6E44E4CA317FA782061B0A52 /* Pods_MusicApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,13 +137,38 @@
 			path = TrackDetailView;
 			sourceTree = "<group>";
 		};
+		ABB9870E232FE12100719FF9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ABB9870F232FE13000719FF9 /* LibraryCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		ABB98711232FE89B00719FF9 /* LocalData */ = {
+			isa = PBXGroup;
+			children = (
+				ABB9871C232FEB5900719FF9 /* TrackLocal */,
+				ABB9871A232FE95400719FF9 /* CoreDataManager.swift */,
+			);
+			path = LocalData;
+			sourceTree = "<group>";
+		};
+		ABB9871C232FEB5900719FF9 /* TrackLocal */ = {
+			isa = PBXGroup;
+			children = (
+				ABB98716232FE8DC00719FF9 /* TrackLocal+CoreDataClass.swift */,
+				ABB98717232FE8DC00719FF9 /* TrackLocal+CoreDataProperties.swift */,
+			);
+			path = TrackLocal;
+			sourceTree = "<group>";
+		};
 		ABCA6837232E242D00EE62F2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				ABF154F5232DF2D300114078 /* TabBarController.swift */,
 				ABCA6838232E244000EE62F2 /* Library */,
 				ABCA6839232E244800EE62F2 /* Search */,
-				AB392F3E232DF62700EEFACE /* OldSearchViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -143,7 +176,8 @@
 		ABCA6838232E244000EE62F2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				ABF154E2232DF1AE00114078 /* ViewController.swift */,
+				ABB9870E232FE12100719FF9 /* Cell */,
+				ABB9870C232FDAEB00719FF9 /* LibraryView.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -199,6 +233,7 @@
 			children = (
 				AB0A55DC232E0DD300151FF6 /* API */,
 				AB0A55E3232E147F00151FF6 /* DataModels */,
+				ABB98711232FE89B00719FF9 /* LocalData */,
 				ABCA683A232E245400EE62F2 /* Tools */,
 				ABCA6837232E242D00EE62F2 /* UI */,
 				ABF154DE232DF1AE00114078 /* AppDelegate.swift */,
@@ -247,6 +282,9 @@
 			dependencies = (
 			);
 			name = MusicApp;
+			packageProductDependencies = (
+				ABB9871E232FF1CD00719FF9 /* URLImage */,
+			);
 			productName = MusicApp;
 			productReference = ABF154DB232DF1AE00114078 /* MusicApp.app */;
 			productType = "com.apple.product-type.application";
@@ -275,6 +313,9 @@
 				Base,
 			);
 			mainGroup = ABF154D2232DF1AE00114078;
+			packageReferences = (
+				ABB9871D232FF1CD00719FF9 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = ABF154DC232DF1AE00114078 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -348,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABCA6846232E249D00EE62F2 /* SearchViewController.swift in Sources */,
+				ABB98710232FE13000719FF9 /* LibraryCell.swift in Sources */,
 				ABCA684E232E2AD900EE62F2 /* UIViewController+Storyboard.swift in Sources */,
 				ABB98702232E837900719FF9 /* FooterView.swift in Sources */,
 				ABB98705232E89CD00719FF9 /* TrackDetailView.swift in Sources */,
@@ -355,17 +397,19 @@
 				ABB9870B232EB01C00719FF9 /* UIView + Extension.swift in Sources */,
 				ABCA6847232E249D00EE62F2 /* SearchInteractor.swift in Sources */,
 				ABB98709232EA14600719FF9 /* CMTime + Extension.swift in Sources */,
-				AB392F3F232DF62700EEFACE /* OldSearchViewController.swift in Sources */,
 				AB0A55DE232E0DF200151FF6 /* APIService.swift in Sources */,
 				AB0A55E0232E100800151FF6 /* Endpoint.swift in Sources */,
-				ABF154E3232DF1AE00114078 /* ViewController.swift in Sources */,
 				ABCA6843232E249D00EE62F2 /* SearchWorker.swift in Sources */,
 				ABF154DF232DF1AE00114078 /* AppDelegate.swift in Sources */,
 				ABCA6845232E249D00EE62F2 /* SearchModels.swift in Sources */,
 				ABB986FF232E3EFD00719FF9 /* TrackCell.swift in Sources */,
 				ABF154E1232DF1AE00114078 /* SceneDelegate.swift in Sources */,
+				ABB98718232FE8DC00719FF9 /* TrackLocal+CoreDataClass.swift in Sources */,
+				ABB98719232FE8DC00719FF9 /* TrackLocal+CoreDataProperties.swift in Sources */,
+				ABB9871B232FE95400719FF9 /* CoreDataManager.swift in Sources */,
 				AB0A55E5232E149400151FF6 /* Tracks.swift in Sources */,
 				ABF154F6232DF2D300114078 /* TabBarController.swift in Sources */,
+				ABB9870D232FDAEB00719FF9 /* LibraryView.swift in Sources */,
 				AB0A55E2232E132700151FF6 /* Container.swift in Sources */,
 				ABF154E9232DF1AE00114078 /* MusicApp.xcdatamodeld in Sources */,
 				ABCA6844232E249D00EE62F2 /* SearchRouter.swift in Sources */,
@@ -560,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABB9871D232FF1CD00719FF9 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABB9871E232FF1CD00719FF9 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABB9871D232FF1CD00719FF9 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		ABF154E7232DF1AE00114078 /* MusicApp.xcdatamodeld */ = {

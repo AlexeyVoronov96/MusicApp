@@ -35,6 +35,7 @@ enum Search {
 
 struct SearchViewModel {
     struct Cell: TrackCellViewModel {
+        let trackId: Int32
         let iconURL: URL?
         let trackName: String
         let collectionName: String?

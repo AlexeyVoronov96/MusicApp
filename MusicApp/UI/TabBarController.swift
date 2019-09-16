@@ -6,6 +6,7 @@
 //  Copyright © 2019 Алексей Воронов. All rights reserved.
 //
 
+import SwiftUI
 import UIKit
 
 class TabBarController: UITabBarController {
@@ -23,8 +24,14 @@ class TabBarController: UITabBarController {
         tabBar.tintColor = #colorLiteral(red: 1, green: 0, blue: 0.3764705882, alpha: 1)
         setupTrackDetailView()
         
+        var library = LibraryView()
+        library.transitionDelegate = self
+        let libraryHostVC = UIHostingController(rootView: library)
+        libraryHostVC.tabBarItem.image = #imageLiteral(resourceName: "Library")
+        libraryHostVC.tabBarItem.title = "Library"
+        
         viewControllers = [
-            generateViewController(ViewController(), with: #imageLiteral(resourceName: "Library"), and: "Library"),
+            libraryHostVC,
             generateViewController(searchVC, with: #imageLiteral(resourceName: "Search"), and: "Search")
         ]
     }
