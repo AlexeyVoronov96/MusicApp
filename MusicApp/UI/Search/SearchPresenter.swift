@@ -34,7 +34,8 @@ class SearchPresenter: SearchPresentationLogic {
     
     
     private func createCellViewModel(from track: Track) -> SearchViewModel.Cell {
-        return SearchViewModel.Cell(iconURL: track.artworkUrl100,
+        return SearchViewModel.Cell(trackId: track.trackId,
+                                    iconURL: track.artworkUrl100,
                                     trackName: track.trackName,
                                     collectionName: track.collectionName,
                                     artistName: track.artistName,

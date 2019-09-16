@@ -10,7 +10,7 @@ import AVKit
 import Kingfisher
 import UIKit
 
-protocol TrackDetailViewDelegate: class {
+protocol TrackDetailViewDelegate {
     func moveBackForPreviousTrack() -> SearchViewModel.Cell?
     func moveForwardForNextTrack() -> SearchViewModel.Cell?
 }
@@ -36,7 +36,7 @@ class TrackDetailView: UIView {
     @IBOutlet private var miniPlayPauseButton: UIButton!
     @IBOutlet private var volumeSlider: UISlider!
     
-    weak var delegate: TrackDetailViewDelegate?
+    var delegate: TrackDetailViewDelegate?
     weak var transitionDelegate: TrackDetailViewTransitionDelegate?
     
     let player: AVPlayer = {

@@ -63,6 +63,23 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+        
+        let keyWindow = UIApplication.shared.connectedScenes
+            .filter { $0.activationState == .foregroundActive }
+            .map { $0 as? UIWindowScene }
+            .compactMap { $0 }
+            .first?
+            .windows
+            .filter { $0.isKeyWindow }
+            .first
+        let tabBarVC = keyWindow?.rootViewController as? TabBarController
+        tabBarVC?.trackDetailView.delegate = self
+    }
+    
     private func setupSearchBar() {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -103,6 +120,7 @@ extension SearchViewController: UITableViewDataSource {
             fatalError("Cell type should be TrackCell")
         }
         let track = tracks.cells[indexPath.row]
+        cell.delegate = self
         cell.trackModel = track
         return cell
     }
@@ -170,5 +188,12 @@ extension SearchViewController: TrackDetailViewDelegate {
     
     func moveForwardForNextTrack() -> SearchViewModel.Cell? {
         return getTrack(isForwardTrack: true)
+    }
+}
+
+extension SearchViewController: TrackCellDelegate {
+    func trackCell(_ cell: TrackCell, shouldSave track: SearchViewModel.Cell) {
+        TrackLocal.create(from: track)
+        CoreDataManager.shared.saveContext()
     }
 }

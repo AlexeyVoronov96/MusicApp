@@ -15,6 +15,7 @@ struct TracksResponse: Decodable {
 
 typealias Tracks = [Track]
 struct Track: Decodable {
+    let trackId: Int32
     let artistName: String
     let collectionName: String?
     let trackName: String
