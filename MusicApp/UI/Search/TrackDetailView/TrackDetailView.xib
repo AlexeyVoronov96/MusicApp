@@ -228,10 +228,11 @@
                 <outlet property="maximizedTrackStackView" destination="pAp-Ls-J5w" id="4Zy-zG-IAS"/>
                 <outlet property="miniPlayPauseButton" destination="Qbw-dF-DOc" id="XcP-IS-oc1"/>
                 <outlet property="miniTrackImageView" destination="6FT-8E-dBl" id="HPG-O6-UXI"/>
+                <outlet property="minimizedTrackNameLabel" destination="kJ4-5S-zI2" id="3oa-US-Xwh"/>
                 <outlet property="minimizedTrackView" destination="j70-Cr-XtD" id="n5E-wZ-m5V"/>
                 <outlet property="playPauseButton" destination="lQg-H4-k38" id="S6I-bI-uqK"/>
                 <outlet property="trackImageView" destination="rTQ-vk-G1t" id="ptx-tr-6mh"/>
-                <outlet property="trackNameLabel" destination="kJ4-5S-zI2" id="2Fg-Sp-Ehf"/>
+                <outlet property="trackNameLabel" destination="zs7-KX-Lmh" id="bKy-gP-3hz"/>
                 <outlet property="volumeSlider" destination="TOa-6p-w4c" id="gO0-6w-kKs"/>
             </connections>
             <point key="canvasLocation" x="107.97101449275362" y="-147.32142857142856"/>
