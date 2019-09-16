@@ -79,9 +79,9 @@ extension TabBarController: TrackDetailViewTransitionDelegate {
                        completion: nil)
     }
     
-    func maximizeTrackDetailView(with viewModel: SearchViewModel.Cell) {
-        maximizedTopAnchorConstraint.isActive = true
+    func maximizeTrackDetailView(with viewModel: SearchViewModel.Cell?) {
         minimizedTopAnchorConstraint.isActive = false
+        maximizedTopAnchorConstraint.isActive = true
         maximizedTopAnchorConstraint.constant = 0
         bottomAnchorConstraint.constant = 0
         
@@ -97,6 +97,10 @@ extension TabBarController: TrackDetailViewTransitionDelegate {
                        },
                        completion: nil)
         
-        trackDetailView.set(viewModel: viewModel)
+        guard let track = viewModel else {
+            return
+        }
+        
+        trackDetailView.set(viewModel: track)
     }
 }

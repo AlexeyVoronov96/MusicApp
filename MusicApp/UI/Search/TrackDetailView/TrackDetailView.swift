@@ -17,7 +17,7 @@ protocol TrackDetailViewDelegate: class {
 
 protocol TrackDetailViewTransitionDelegate: class {
     func minimizeTrackDetailView()
-    func maximizeTrackDetailView(with viewModel: SearchViewModel.Cell)
+    func maximizeTrackDetailView(with viewModel: SearchViewModel.Cell?)
 }
 
 class TrackDetailView: UIView {
@@ -30,6 +30,7 @@ class TrackDetailView: UIView {
     @IBOutlet private var currentTimeLabel: UILabel!
     @IBOutlet private var durationLabel: UILabel!
     @IBOutlet private var trackNameLabel: UILabel!
+    @IBOutlet private var minimizedTrackNameLabel: UILabel!
     @IBOutlet private var artistNameLabel: UILabel!
     @IBOutlet private var playPauseButton: UIButton!
     @IBOutlet private var miniPlayPauseButton: UIButton!
@@ -49,6 +50,7 @@ class TrackDetailView: UIView {
         super.awakeFromNib()
         
         trackImageView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        setupGestures()
     }
     
     // MARK: - IBActions
@@ -102,6 +104,7 @@ class TrackDetailView: UIView {
     // MARK: - Setting
     func set(viewModel: SearchViewModel.Cell) {
         trackNameLabel.text = viewModel.trackName
+        minimizedTrackNameLabel.text = viewModel.trackName
         artistNameLabel.text = viewModel.artistName
         playPauseButton.setImage(#imageLiteral(resourceName: "Pause"), for: .normal)
         miniPlayPauseButton.setImage(#imageLiteral(resourceName: "Pause"), for: .normal)
@@ -114,6 +117,99 @@ class TrackDetailView: UIView {
         monitorStartTime()
         observePlayerCurrentTime()
         playTrack(from: viewModel.previewUrl)
+    }
+    
+    // MARK: - Gestures
+    private func setupGestures() {
+        minimizedTrackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapMaximized)))
+        minimizedTrackView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePan)))
+        addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismissalPan)))
+    }
+    
+    @objc private func handleTapMaximized(_ sender: UITapGestureRecognizer) {
+        transitionDelegate?.maximizeTrackDetailView(with: nil)
+    }
+    
+    @objc private func handlePan(_ sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .changed:
+            handlePanChanged(sender)
+            
+        case .ended:
+            handlePanEnded(sender)
+            
+        default:
+            break
+        }
+    }
+    
+    private func handlePanChanged(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: superview)
+        self.transform = CGAffineTransform(translationX: 0, y: translation.y)
+        
+        let newAlpha = 1 + translation.y / 200
+        minimizedTrackView.alpha = newAlpha < 0 ? 0 : newAlpha
+        maximizedTrackStackView.alpha = -translation.y / 200
+    }
+    
+    private func handlePanEnded(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: superview)
+        let velocity = sender.velocity(in: superview)
+        
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 0.7,
+                       initialSpringVelocity: 1,
+                       options: [.curveEaseOut],
+                       animations: { [weak self] in
+                        self?.transform = .identity
+                        if translation.y < -200 || velocity.y < -500 {
+                            self?.transitionDelegate?.maximizeTrackDetailView(with: nil)
+                        } else {
+                            self?.minimizedTrackView.alpha = 1
+                            self?.maximizedTrackStackView.alpha = 0
+                        }
+                       }, completion: nil)
+    }
+    
+    @objc private func handleDismissalPan(_ sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .changed:
+            handleDismissalPanChanged(sender)
+        case .ended:
+            handleDismissalPanEnded(sender)
+        default:
+            break
+        }
+    }
+    
+    private func handleDismissalPanChanged(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: superview)
+        self.transform = CGAffineTransform(translationX: 0, y: translation.y)
+        
+        let newAlpha = 1 - translation.y / 200
+        maximizedTrackStackView.alpha = newAlpha < 0 ? 0 : newAlpha
+        minimizedTrackView.alpha = translation.y / 200
+    }
+    
+    private func handleDismissalPanEnded(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: superview)
+        let velocity = sender.velocity(in: superview)
+        
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 0.7,
+                       initialSpringVelocity: 1,
+                       options: [.curveEaseOut],
+                       animations: { [weak self] in
+                        self?.transform = .identity
+                        if translation.y > 50 || velocity.y < -500 {
+                            self?.transitionDelegate?.minimizeTrackDetailView()
+                        } else {
+                            self?.minimizedTrackView.alpha = 0
+                            self?.maximizedTrackStackView.alpha = 1
+                        }
+                       }, completion: nil)
     }
     
     func showMaximizedView() {
