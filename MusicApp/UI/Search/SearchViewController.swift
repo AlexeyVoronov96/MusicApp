@@ -45,10 +45,6 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         router.viewController     = viewController
     }
     
-    // MARK: Routing
-    
-    
-    
     // MARK: View lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -84,6 +80,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.searchBar.delegate = self
+        searchController.searchBar.tintColor = #colorLiteral(red: 0.9503687024, green: 0.2928149104, blue: 0.4626763463, alpha: 1)
         searchController.obscuresBackgroundDuringPresentation = false
     }
     
