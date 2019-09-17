@@ -29,7 +29,7 @@ struct LibraryView: View {
                                 .frame(width: geometry.size.width / 2 - 10,
                                        height: 50)
                                 .accentColor(Color(#colorLiteral(red: 0.9503687024, green: 0.2928149104, blue: 0.4626763463, alpha: 1)))
-                                .background(Color(#colorLiteral(red: 0.9584861425, green: 0.9584861425, blue: 0.9584861425, alpha: 1)))
+                                .background(Color("Button"))
                                 .cornerRadius(10)
                         })
                         Button(action: {
@@ -39,7 +39,7 @@ struct LibraryView: View {
                                 .frame(width: geometry.size.width / 2 - 10,
                                        height: 50)
                                 .accentColor(Color.init(#colorLiteral(red: 0.9503687024, green: 0.2928149104, blue: 0.4626763463, alpha: 1)))
-                                .background(Color(#colorLiteral(red: 0.9584861425, green: 0.9584861425, blue: 0.9584861425, alpha: 1)))
+                                .background(Color("Button"))
                                 .cornerRadius(10)
                         })
                     }

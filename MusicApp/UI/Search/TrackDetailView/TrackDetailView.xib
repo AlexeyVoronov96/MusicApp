@@ -157,10 +157,10 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ryS-Bu-E6z">
-                            <rect key="frame" x="0.0" y="544" width="354" height="208"/>
+                            <rect key="frame" x="0.0" y="544" width="354" height="204"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggY-ZL-mEo">
-                                    <rect key="frame" x="0.0" y="94" width="118" height="20"/>
+                                    <rect key="frame" x="0.0" y="82" width="118" height="40"/>
                                     <color key="tintColor" name="Black"/>
                                     <state key="normal" image="Back track">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -170,7 +170,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQg-H4-k38">
-                                    <rect key="frame" x="118" y="76.5" width="118" height="55"/>
+                                    <rect key="frame" x="118" y="47" width="118" height="110"/>
                                     <color key="tintColor" name="Black"/>
                                     <state key="normal" image="Pause">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -180,7 +180,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRT-iw-Ycx">
-                                    <rect key="frame" x="236" y="94" width="118" height="20"/>
+                                    <rect key="frame" x="236" y="82" width="118" height="40"/>
                                     <color key="tintColor" name="Black"/>
                                     <state key="normal" image="Fast forward"/>
                                     <connections>
@@ -190,20 +190,20 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="szF-ox-rZa">
-                            <rect key="frame" x="0.0" y="762" width="354" height="30"/>
+                            <rect key="frame" x="0.0" y="758" width="354" height="34"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Volume Min" translatesAutoresizingMaskIntoConstraints="NO" id="nT9-RO-woo">
-                                    <rect key="frame" x="0.0" y="0.0" width="7" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="14" height="34"/>
                                 </imageView>
                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TOa-6p-w4c">
-                                    <rect key="frame" x="13" y="0.0" width="318" height="31"/>
+                                    <rect key="frame" x="20" y="0.0" width="294" height="35"/>
                                     <color key="tintColor" red="0.59215686274509804" green="0.58823529411764708" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="handleVolumeSlider:" destination="FN8-Dh-jE6" eventType="valueChanged" id="TX5-A0-rM3"/>
                                     </connections>
                                 </slider>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Volume Max" translatesAutoresizingMaskIntoConstraints="NO" id="HbU-VP-KIk">
-                                    <rect key="frame" x="337" y="0.0" width="17" height="30"/>
+                                    <rect key="frame" x="320" y="0.0" width="34" height="34"/>
                                 </imageView>
                             </subviews>
                         </stackView>
