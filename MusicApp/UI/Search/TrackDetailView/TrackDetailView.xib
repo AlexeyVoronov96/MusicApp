@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +51,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="dXP-e0-VnG"/>
                                     </constraints>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" name="Black"/>
                                     <inset key="imageEdgeInsets" minX="11" minY="11" maxX="11" maxY="11"/>
                                     <state key="normal" image="Pause"/>
                                     <connections>
@@ -62,7 +63,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="48" id="MdI-4F-BHA"/>
                                     </constraints>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" name="Black"/>
                                     <state key="normal" image="Fast forward"/>
                                     <connections>
                                         <action selector="nextTrackButtonAction:" destination="FN8-Dh-jE6" eventType="touchUpInside" id="b89-7f-Xz1"/>
@@ -160,7 +161,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggY-ZL-mEo">
                                     <rect key="frame" x="0.0" y="94" width="118" height="20"/>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" name="Black"/>
                                     <state key="normal" image="Back track">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
@@ -169,8 +170,8 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQg-H4-k38">
-                                    <rect key="frame" x="118" y="75.5" width="118" height="57"/>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <rect key="frame" x="118" y="76.5" width="118" height="55"/>
+                                    <color key="tintColor" name="Black"/>
                                     <state key="normal" image="Pause">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
@@ -180,7 +181,7 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRT-iw-Ycx">
                                     <rect key="frame" x="236" y="94" width="118" height="20"/>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" name="Black"/>
                                     <state key="normal" image="Fast forward"/>
                                     <connections>
                                         <action selector="nextTrackButtonAction:" destination="FN8-Dh-jE6" eventType="touchUpInside" id="Dfv-ey-vAg"/>
@@ -242,8 +243,11 @@
         <image name="Back track" width="34" height="20"/>
         <image name="Drag Down" width="37" height="12"/>
         <image name="Fast forward" width="34" height="20"/>
-        <image name="Pause" width="57" height="57"/>
+        <image name="Pause" width="43" height="55"/>
         <image name="Volume Max" width="17" height="17"/>
         <image name="Volume Min" width="7" height="12"/>
+        <namedColor name="Black">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
