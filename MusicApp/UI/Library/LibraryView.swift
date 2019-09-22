@@ -24,6 +24,7 @@ struct LibraryView: View {
             VStack {
                 GeometryReader { geometry in
                     Button(action: {
+                        if self.tracks.isEmpty { return }
                         self.track = self.tracks[0]
                         let trackModel = self.performTrackModel(from: self.track)
                         self.transitionDelegate.maximizeTrackDetailView(with: trackModel)
