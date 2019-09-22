@@ -9,40 +9,33 @@
 import SwiftUI
 
 struct LibraryView: View {
-    @State var tracks: [TrackLocal] = localTracks
+    var transitionDelegate: TrackDetailViewTransitionDelegate
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(entity: TrackLocal.entity(), sortDescriptors: [
+        NSSortDescriptor(key: "savingDate", ascending: false)
+    ]) var tracks: FetchedResults<TrackLocal>
+    
     @State private var showingAlert: Bool = false
     @State private var track: TrackLocal!
-    
-    var transitionDelegate: TrackDetailViewTransitionDelegate?
     
     var body: some View {
         NavigationView {
             VStack {
                 GeometryReader { geometry in
-                    HStack(spacing: 20) {
-                        Button(action: {
-                            self.track = self.tracks[0]
-                            let trackModel = self.performTrackModel(from: self.track)
-                            self.transitionDelegate?.maximizeTrackDetailView(with: trackModel)
-                        }, label: {
-                            Image(systemName: "play.fill")
-                                .frame(width: geometry.size.width / 2 - 10,
-                                       height: 50)
-                                .accentColor(Color(#colorLiteral(red: 0.9503687024, green: 0.2928149104, blue: 0.4626763463, alpha: 1)))
-                                .background(Color("Button"))
-                                .cornerRadius(10)
-                        })
-                        Button(action: {
-                            self.tracks = localTracks
-                        }, label: {
-                            Image(systemName: "arrow.2.circlepath")
-                                .frame(width: geometry.size.width / 2 - 10,
-                                       height: 50)
-                                .accentColor(Color.init(#colorLiteral(red: 0.9503687024, green: 0.2928149104, blue: 0.4626763463, alpha: 1)))
-                                .background(Color("Button"))
-                                .cornerRadius(10)
-                        })
-                    }
+                    Button(action: {
+                        self.track = self.tracks[0]
+                        let trackModel = self.performTrackModel(from: self.track)
+                        self.transitionDelegate.maximizeTrackDetailView(with: trackModel)
+                    }, label: {
+                        Image(systemName: "play.fill")
+                            .frame(width: geometry.size.width,
+                                   height: 50)
+                            .accentColor(Color(#colorLiteral(red: 0.9503687024, green: 0.2928149104, blue: 0.4626763463, alpha: 1)))
+                            .background(Color("Button"))
+                            .cornerRadius(10)
+                            .imageScale(.large)
+                    })
                 }
                 .padding()
                 .frame(height: 50)
@@ -71,7 +64,7 @@ struct LibraryView: View {
                                         let tabBarVC = keyWindow?.rootViewController as? TabBarController
                                         tabBarVC?.trackDetailView.delegate = self
                                         let trackModel = self.performTrackModel(from: track)
-                                        self.transitionDelegate?.maximizeTrackDetailView(with: trackModel)
+                                        self.transitionDelegate.maximizeTrackDetailView(with: trackModel)
                                     }
                             ))
                     }
@@ -87,14 +80,12 @@ struct LibraryView: View {
                     ]
                 )
             })
-                
                 .navigationBarTitle("Library")
         }
     }
     
     private func delete(track: TrackLocal) {
         CoreDataManager.shared.managedObjectContext.delete(track)
-        tracks = localTracks
         CoreDataManager.shared.saveContext()
     }
     

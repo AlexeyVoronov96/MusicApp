@@ -24,8 +24,8 @@ class TabBarController: UITabBarController {
         tabBar.tintColor = #colorLiteral(red: 1, green: 0, blue: 0.3764705882, alpha: 1)
         setupTrackDetailView()
         
-        var library = LibraryView()
-        library.transitionDelegate = self
+        let context = CoreDataManager.shared.managedObjectContext
+        let library = LibraryView(transitionDelegate: self).environment(\.managedObjectContext, context)
         let libraryHostVC = UIHostingController(rootView: library)
         libraryHostVC.tabBarItem.image = #imageLiteral(resourceName: "Library")
         libraryHostVC.tabBarItem.title = "Library"

@@ -9,17 +9,6 @@
 import CoreData
 import Foundation
 
-var localTracks: [TrackLocal] {
-    let request = NSFetchRequest<TrackLocal>(entityName: "TrackLocal")
-    
-    let sd = NSSortDescriptor(key: "savingDate", ascending: false)
-    request.sortDescriptors = [sd]
-    
-    let array = try? CoreDataManager.shared.managedObjectContext.fetch(request)
-    
-    return array ?? []
-}
-
 class CoreDataManager {
     static let shared = CoreDataManager()
     
