@@ -6,7 +6,7 @@
 //  Copyright © 2019 Алексей Воронов. All rights reserved.
 //
 
-import URLImage
+import KingfisherSwiftUI
 import SwiftUI
 
 struct LibraryCell: View {
@@ -14,7 +14,7 @@ struct LibraryCell: View {
     
     var body: some View {
         HStack {
-            URLImage(track.imageURL ?? URL(string: "")!)
+            KFImage(track.imageURL)
                 .resizable()
                 .frame(width: 60, height: 60)
                 .cornerRadius(6)

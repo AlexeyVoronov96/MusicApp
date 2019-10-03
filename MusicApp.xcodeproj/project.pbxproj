@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E44E4CA317FA782061B0A52 /* Pods_MusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F857285F0260E58557BE19 /* Pods_MusicApp.framework */; };
 		AB0A55DE232E0DF200151FF6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A55DD232E0DF200151FF6 /* APIService.swift */; };
 		AB0A55E0232E100800151FF6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A55DF232E100800151FF6 /* Endpoint.swift */; };
 		AB0A55E2232E132700151FF6 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A55E1232E132700151FF6 /* Container.swift */; };
@@ -24,7 +23,8 @@
 		ABB98718232FE8DC00719FF9 /* TrackLocal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB98716232FE8DC00719FF9 /* TrackLocal+CoreDataClass.swift */; };
 		ABB98719232FE8DC00719FF9 /* TrackLocal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB98717232FE8DC00719FF9 /* TrackLocal+CoreDataProperties.swift */; };
 		ABB9871B232FE95400719FF9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9871A232FE95400719FF9 /* CoreDataManager.swift */; };
-		ABB9871F232FF1CD00719FF9 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = ABB9871E232FF1CD00719FF9 /* URLImage */; };
+		ABB99E4F234641DA0089DEF4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ABB99E4E234641DA0089DEF4 /* Kingfisher */; };
+		ABB99E51234641DA0089DEF4 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ABB99E50234641DA0089DEF4 /* KingfisherSwiftUI */; };
 		ABCA6842232E249D00EE62F2 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683B232E249D00EE62F2 /* SearchPresenter.swift */; };
 		ABCA6843232E249D00EE62F2 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683C232E249D00EE62F2 /* SearchWorker.swift */; };
 		ABCA6844232E249D00EE62F2 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA683D232E249D00EE62F2 /* SearchRouter.swift */; };
@@ -43,7 +43,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02F857285F0260E58557BE19 /* Pods_MusicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0A55DD232E0DF200151FF6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		AB0A55DF232E100800151FF6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AB0A55E1232E132700151FF6 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -77,8 +76,6 @@
 		ABF154ED232DF1B600114078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABF154EF232DF1B600114078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF154F5232DF2D300114078 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		B9B4D08BF603AC6586EAB459 /* Pods-MusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.debug.xcconfig"; path = "Target Support Files/Pods-MusicApp/Pods-MusicApp.debug.xcconfig"; sourceTree = "<group>"; };
-		E536E40F4520A60C53D79ACF /* Pods-MusicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.release.xcconfig"; path = "Target Support Files/Pods-MusicApp/Pods-MusicApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB9871F232FF1CD00719FF9 /* URLImage in Frameworks */,
-				6E44E4CA317FA782061B0A52 /* Pods_MusicApp.framework in Frameworks */,
+				ABB99E51234641DA0089DEF4 /* KingfisherSwiftUI in Frameworks */,
+				ABB99E4F234641DA0089DEF4 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +212,6 @@
 			children = (
 				ABF154DD232DF1AE00114078 /* MusicApp */,
 				ABF154DC232DF1AE00114078 /* Products */,
-				D6ECDFC6FB0AA4E5EEDDE202 /* Pods */,
-				EFAC5EBFFEF599F8A511CC15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,23 +242,6 @@
 			path = MusicApp;
 			sourceTree = "<group>";
 		};
-		D6ECDFC6FB0AA4E5EEDDE202 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B9B4D08BF603AC6586EAB459 /* Pods-MusicApp.debug.xcconfig */,
-				E536E40F4520A60C53D79ACF /* Pods-MusicApp.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		EFAC5EBFFEF599F8A511CC15 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				02F857285F0260E58557BE19 /* Pods_MusicApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,11 +249,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABF154F2232DF1B600114078 /* Build configuration list for PBXNativeTarget "MusicApp" */;
 			buildPhases = (
-				4A4D3731D6FB19026A50F715 /* [CP] Check Pods Manifest.lock */,
 				ABF154D7232DF1AE00114078 /* Sources */,
 				ABF154D8232DF1AE00114078 /* Frameworks */,
 				ABF154D9232DF1AE00114078 /* Resources */,
-				D28930672D1EA201621F104D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,7 +259,8 @@
 			);
 			name = MusicApp;
 			packageProductDependencies = (
-				ABB9871E232FF1CD00719FF9 /* URLImage */,
+				ABB99E4E234641DA0089DEF4 /* Kingfisher */,
+				ABB99E50234641DA0089DEF4 /* KingfisherSwiftUI */,
 			);
 			productName = MusicApp;
 			productReference = ABF154DB232DF1AE00114078 /* MusicApp.app */;
@@ -314,7 +291,7 @@
 			);
 			mainGroup = ABF154D2232DF1AE00114078;
 			packageReferences = (
-				ABB9871D232FF1CD00719FF9 /* XCRemoteSwiftPackageReference "url-image" */,
+				ABB99E4D234641DA0089DEF4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = ABF154DC232DF1AE00114078 /* Products */;
 			projectDirPath = "";
@@ -340,48 +317,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4A4D3731D6FB19026A50F715 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MusicApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D28930672D1EA201621F104D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MusicApp/Pods-MusicApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MusicApp/Pods-MusicApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MusicApp/Pods-MusicApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ABF154D7232DF1AE00114078 /* Sources */ = {
@@ -546,7 +481,6 @@
 		};
 		ABF154F3232DF1B600114078 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9B4D08BF603AC6586EAB459 /* Pods-MusicApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -565,7 +499,6 @@
 		};
 		ABF154F4232DF1B600114078 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E536E40F4520A60C53D79ACF /* Pods-MusicApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -606,21 +539,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ABB9871D232FF1CD00719FF9 /* XCRemoteSwiftPackageReference "url-image" */ = {
+		ABB99E4D234641DA0089DEF4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.6.1;
+				minimumVersion = 5.8.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ABB9871E232FF1CD00719FF9 /* URLImage */ = {
+		ABB99E4E234641DA0089DEF4 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ABB9871D232FF1CD00719FF9 /* XCRemoteSwiftPackageReference "url-image" */;
-			productName = URLImage;
+			package = ABB99E4D234641DA0089DEF4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		ABB99E50234641DA0089DEF4 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABB99E4D234641DA0089DEF4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 
