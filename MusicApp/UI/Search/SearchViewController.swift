@@ -88,6 +88,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         let nib = UINib(nibName: "TrackCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: TrackCell.cellId)
         tableView.tableFooterView = footerView
+        tableView.keyboardDismissMode = .interactive
     }
     
     func displayData(viewModel: Search.Model.ViewModel.ViewModelData) {

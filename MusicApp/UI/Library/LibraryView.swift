@@ -46,42 +46,37 @@ struct LibraryView: View {
                 List {
                     ForEach(tracks, id: \.self) { track in
                         LibraryCell(track: track)
-                            .gesture(
-                                LongPressGesture().onEnded { _ in
-                                    self.track = track
-                                    self.showingAlert = true
-                                }
-                                .simultaneously(with:
-                                    TapGesture().onEnded { _ in
-                                        self.track = track
-                                        let keyWindow = UIApplication.shared.connectedScenes
-                                            .filter { $0.activationState == .foregroundActive }
-                                            .map { $0 as? UIWindowScene }
-                                            .compactMap { $0 }
-                                            .first?
-                                            .windows
-                                            .filter { $0.isKeyWindow }
-                                            .first
-                                        let tabBarVC = keyWindow?.rootViewController as? TabBarController
-                                        tabBarVC?.trackDetailView.delegate = self
-                                        let trackModel = self.performTrackModel(from: track)
-                                        self.transitionDelegate.maximizeTrackDetailView(with: trackModel)
-                                    }
-                            ))
+                        .contextMenu {
+                            Text("Are you sure you want to delete this track?")
+                            Button(
+                                action: {
+                                    self.delete(track: track)
+                            }) {
+                                Text("Delete")
+                                Image(systemName: "trash.fill")
+                            }
+                        }
+                        .gesture(
+                            TapGesture().onEnded { _ in
+                                self.track = track
+                                let keyWindow = UIApplication.shared.connectedScenes
+                                    .filter { $0.activationState == .foregroundActive }
+                                    .map { $0 as? UIWindowScene }
+                                    .compactMap { $0 }
+                                    .first?
+                                    .windows
+                                    .filter { $0.isKeyWindow }
+                                    .first
+                                let tabBarVC = keyWindow?.rootViewController as? TabBarController
+                                tabBarVC?.trackDetailView.delegate = self
+                                let trackModel = self.performTrackModel(from: track)
+                                self.transitionDelegate.maximizeTrackDetailView(with: trackModel)
+                            }
+                        )
                     }
                 }
             }
-            .actionSheet(isPresented: $showingAlert, content: {
-                ActionSheet(title: Text("Are you sure you want to delete this track?"),
-                            buttons: [
-                                .destructive(Text("Delete"), action: {
-                                    self.delete(track: self.track)
-                                }),
-                                .cancel()
-                    ]
-                )
-            })
-                .navigationBarTitle("Library")
+            .navigationBarTitle("Library")
         }
     }
     
